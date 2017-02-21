@@ -7,7 +7,12 @@
  */
 
 require "autoloader/autoloader.php";
+$router = new Router();
 
-$goran = new Employee("Goran", 31, "PHP");
-
-$goran->iterate_properties();
+if ($router->get() === "/employee") {
+    include_once "view/employee.php";
+}elseif($router->get() === "/manager"){
+    echo "Instantiate a Manager class";
+}else{
+    echo 404;
+}

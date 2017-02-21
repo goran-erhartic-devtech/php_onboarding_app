@@ -6,10 +6,9 @@
  * Time: 10:30 AM
  */
 
-spl_autoload_register(function($class) {
-
-    $filename = $_SERVER['DOCUMENT_ROOT'].'\classes' . '\\' . $class . '.php';
-    if(!file_exists($filename)) {
+spl_autoload_register(function ($class) {
+    $filename = $_SERVER['DOCUMENT_ROOT'] . '\classes' . '\\' . $class . '.php';
+    if (!file_exists($filename)) {
         return false;
     }
     include $filename;
