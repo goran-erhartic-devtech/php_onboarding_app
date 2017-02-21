@@ -7,12 +7,19 @@
  */
 
 require "autoloader/autoloader.php";
+require "name/example/Url_not_found.php";
+
 $router = new Router();
 
 if ($router->get() === "/employee") {
     include_once "view/employee.php";
-}elseif($router->get() === "/manager"){
+} elseif ($router->get() === "/manager") {
     echo "Instantiate a Manager class";
-}else{
-    echo 404;
+} elseif ($router->get() === "/"){
+    echo "Hello World";
+}
+
+else {
+    $name_class = new \name\example\Url_not_found(); //namespace class
+    echo $name_class->message();
 }

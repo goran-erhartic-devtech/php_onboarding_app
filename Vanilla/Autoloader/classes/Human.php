@@ -5,7 +5,6 @@
  * Date: 20/2/2017
  * Time: 10:34 AM
  */
-
 abstract class Human
 {
     protected $name;
