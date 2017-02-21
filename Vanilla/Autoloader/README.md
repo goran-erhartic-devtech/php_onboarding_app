@@ -9,6 +9,6 @@ How to use:
 
 - This takes you to to the homepage with simple 'Hello World!'
 
-- Routes that are defined are '/', '/employee', and '/manager/'
+- Routes that are defined are '/', '/employee', and '/manager'
 
 - Also there is a 404 page if the user enters a non-defined route
