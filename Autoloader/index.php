@@ -12,9 +12,9 @@ require "name/example/Url_not_found.php";
 $router = new Router();
 
 if ($router->get() === "/employees") {
-    include_once "view/employee.php";
+    include_once "view/employees.php";
 } elseif ($router->get() === "/managers") {
-    include_once "view/manager.php";
+    include_once "view/managers.php";
 } elseif ($router->get() === "/"){
     echo "Hello World";
 }
