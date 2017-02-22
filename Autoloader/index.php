@@ -11,10 +11,10 @@ require "name/example/Url_not_found.php";
 
 $router = new Router();
 
-if ($router->get() === "/employee") {
+if ($router->get() === "/employees") {
     include_once "view/employee.php";
-} elseif ($router->get() === "/manager") {
-    echo "Instantiate a Manager class";
+} elseif ($router->get() === "/managers") {
+    include_once "view/manager.php";
 } elseif ($router->get() === "/"){
     echo "Hello World";
 }
