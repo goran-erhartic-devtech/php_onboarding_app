@@ -21,6 +21,4 @@ class Router
     {
         return $this->full_url;
     }
-
-
 }
