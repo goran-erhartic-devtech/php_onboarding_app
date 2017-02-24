@@ -5,7 +5,7 @@
  * Date: 23/2/2017
  * Time: 9:35 AM
  */
-namespace src\GE\Person;
+namespace GE\Person;
 
 abstract class AbstractHuman
 {

@@ -41,12 +41,12 @@ class Router
 $router = new Router();
 
 $router->get('/managers', function () {
-    $aa = new \src\GE\Person\Manager("Goran", 31, array("one", "two", "three"));
+    $aa = new \GE\Person\Manager("Goran", 31, array("one", "two", "three"));
     echo $aa->iterateProperties();
 });
 
 $router->get('/employees', function () {
-    $aa = new \src\GE\Person\Employee("Igor", 33, "PHP", "Onboarding", true);
+    $aa = new \GE\Person\Employee("Igor", 33, "PHP", "Onboarding", true);
     echo $aa->iterateProperties();
 });
 

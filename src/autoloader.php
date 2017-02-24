@@ -6,7 +6,7 @@
  * Time: 8:58 AM
  */
 spl_autoload_register(function ($class) {
-    $filename = dirname(__DIR__) . "\\{$class}.php";
+    $filename = CLASS_PATH . "\\{$class}.php";
     if (!file_exists($filename)) {
         return false;
     }

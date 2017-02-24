@@ -5,7 +5,7 @@
  * Date: 23/2/2017
  * Time: 10:45 AM
  */
-namespace src\GE\Person;
+namespace GE\Person;
 
 class Employee extends AbstractHuman implements EmployeeInterface
 {
