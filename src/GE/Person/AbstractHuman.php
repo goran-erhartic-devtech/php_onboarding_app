@@ -5,7 +5,6 @@
  * Date: 23/2/2017
  * Time: 9:35 AM
  */
-
 namespace src\GE\Person;
 
 abstract class AbstractHuman
@@ -54,9 +53,5 @@ abstract class AbstractHuman
     public function setAge($age)
     {
         $this->age = $age;
-    }
-
-    public function op(){
-        echo "nesto";
     }
 }

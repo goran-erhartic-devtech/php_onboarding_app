@@ -7,6 +7,7 @@
  */
 namespace src\GE\Person;
 
-interface EmployeeInterface{
+interface EmployeeInterface
+{
     public function iterateProperties();
 }

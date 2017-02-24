@@ -6,9 +6,7 @@
  * Time: 8:38 AM
  */
 // Include the core autoloader.
-require_once __DIR__.'/../app/Autoloader.php';
+require_once __DIR__ . '/../src/autoloader.php';
 
 // Include the router.
-require_once __DIR__.'/../app/Router.php';
-
-//define('CLASS_ROOT', __DIR__.'/../src/GE/Person');
+require_once __DIR__ . '/../src/Router.php';

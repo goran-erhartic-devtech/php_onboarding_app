@@ -5,7 +5,6 @@
  * Date: 23/2/2017
  * Time: 10:45 AM
  */
-
 namespace src\GE\Person;
 
 class Employee extends AbstractHuman implements EmployeeInterface
@@ -78,7 +77,8 @@ class Employee extends AbstractHuman implements EmployeeInterface
         $this->is_active = $is_active;
     }
 
-    public function iterateProperties(){
+    public function iterateProperties()
+    {
         foreach ($this as $key => $value) {
             echo "$key => $value<br>";
         }
