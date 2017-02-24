@@ -1,3 +1,7 @@
-# ONBOARDING PROJECTS
+# ONBOARDING PROJECT
 
-- Autoloader -> Simple webapp using vanilla PHP
+- Navigate to the 'public' folder and run the PHP built in server: php -S localhost:8000
+
+- In the browser go to this address: localhost:8000
+
+- Routes that are currently working are '/', '/managers' and '/employees'
