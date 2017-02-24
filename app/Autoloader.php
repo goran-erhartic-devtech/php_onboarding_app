@@ -2,14 +2,16 @@
 /**
  * Created by PhpStorm.
  * User: goran.erhartic
- * Date: 20/2/2017
- * Time: 10:30 AM
+ * Date: 23/2/2017
+ * Time: 8:58 AM
  */
+
 spl_autoload_register(function ($class) {
-    $filename = $_SERVER['DOCUMENT_ROOT'] . '\classes' . '\\' . $class . '.php';
+    $filename = dirname(__DIR__) . "\\{$class}.php";
     if (!file_exists($filename)) {
         return false;
     }
     include $filename;
     return true;
 });
+

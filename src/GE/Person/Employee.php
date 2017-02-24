@@ -2,10 +2,13 @@
 /**
  * Created by PhpStorm.
  * User: goran.erhartic
- * Date: 20/2/2017
- * Time: 10:57 AM
+ * Date: 23/2/2017
+ * Time: 10:45 AM
  */
-class Employee extends Human implements iEmployee
+
+namespace src\GE\Person;
+
+class Employee extends AbstractHuman implements EmployeeInterface
 {
     protected $department;
     protected $project;
@@ -75,9 +78,7 @@ class Employee extends Human implements iEmployee
         $this->is_active = $is_active;
     }
 
-
-
-    public function iterate_properties(){
+    public function iterateProperties(){
         foreach ($this as $key => $value) {
             echo "$key => $value<br>";
         }

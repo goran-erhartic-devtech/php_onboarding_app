@@ -2,10 +2,13 @@
 /**
  * Created by PhpStorm.
  * User: goran.erhartic
- * Date: 20/2/2017
- * Time: 10:34 AM
+ * Date: 23/2/2017
+ * Time: 9:35 AM
  */
-abstract class Human
+
+namespace src\GE\Person;
+
+abstract class AbstractHuman
 {
     protected $name;
     protected $age;
@@ -51,5 +54,9 @@ abstract class Human
     public function setAge($age)
     {
         $this->age = $age;
+    }
+
+    public function op(){
+        echo "nesto";
     }
 }

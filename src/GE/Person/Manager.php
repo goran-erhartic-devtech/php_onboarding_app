@@ -2,11 +2,14 @@
 /**
  * Created by PhpStorm.
  * User: goran.erhartic
- * Date: 22/2/2017
- * Time: 10:11 AM
+ * Date: 23/2/2017
+ * Time: 12:57 PM
  */
 
-class Manager extends Human implements iManager
+namespace src\GE\Person;
+
+
+class Manager extends AbstractHuman implements ManagerInterface
 {
     private $projects;
 
@@ -38,13 +41,14 @@ class Manager extends Human implements iManager
         $this->projects = $projects;
     }
 
-    public function iterate_properties(){
+    public function iterateProperties()
+    {
         foreach ($this as $key => $value) {
-            if(is_array($value)){
+            if (is_array($value)) {
                 $a = implode(',', $value);
                 echo "$key => $a<br>";
 
-            }else {
+            } else {
                 echo "$key => $value<br>";
             }
         }
