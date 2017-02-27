@@ -4,4 +4,4 @@
 
 - In the browser go to this address: localhost:8000
 
-- Routes that are currently working are '/', '/managers' and '/employees'
+- Routes that are currently working are '/', '/managers', '/employees', '/manager/{id}' and '/employee/{id}'
