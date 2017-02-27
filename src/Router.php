@@ -56,31 +56,4 @@ class Router
         }
         return false;
     }
-
 }
-
-$router = new Router();
-
-$router->get('/managers', function () {
-    $aa = new \GE\Person\Manager("Goran", 31, array("one", "two", "three"));
-    echo $aa->iterateProperties();
-});
-
-$router->get('/manager/{id}', function ($id) {
-    echo "This will return Manager with this id: $id";
-});
-
-$router->get('/employees', function () {
-    $aa = new \GE\Person\Employee("Igor", 33, "PHP", "Onboarding", true);
-    echo $aa->iterateProperties();
-});
-
-$router->get('/employee/{id}', function ($id) {
-    echo "This will return Employee with this id: $id";
-});
-
-$router->get('/', function () {
-    echo 'WELCOME';
-});
-
-$router->execute();

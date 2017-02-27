@@ -13,21 +13,16 @@ class Employee extends AbstractHuman implements EmployeeInterface
     protected $project;
     protected $is_active;
 
-    /**
-     * DepartmentManager constructor.
-     * @param $name
-     * @param $age
-     * @param $department
-     * @param $project
-     * @param $is_active
-     */
-    public function __construct($name, $age, $department, $project, $is_active)
-    {
-        parent::__construct($name, $age);
-        $this->department = $department;
-        $this->project = $project;
-        $this->is_active = $is_active;
-    }
+//    /**
+//     * DepartmentManager constructor.
+//     * @param $name
+//     * @param $age
+//     */
+//    public function __construct($name, $age)
+//    {
+//        parent::__construct($name, $age);
+//
+//    }
 
     /**
      * @return mixed
@@ -39,10 +34,12 @@ class Employee extends AbstractHuman implements EmployeeInterface
 
     /**
      * @param mixed $department
+     * @return $this
      */
     public function setDepartment($department)
     {
         $this->department = $department;
+        return $this;
     }
 
     /**
@@ -55,10 +52,12 @@ class Employee extends AbstractHuman implements EmployeeInterface
 
     /**
      * @param mixed $project
+     * @return $this
      */
     public function setProject($project)
     {
         $this->project = $project;
+        return $this;
     }
 
     /**
@@ -71,10 +70,12 @@ class Employee extends AbstractHuman implements EmployeeInterface
 
     /**
      * @param mixed $is_active
+     * @return $this
      */
     public function setIsActive($is_active)
     {
         $this->is_active = $is_active;
+        return $this;
     }
 
     public function iterateProperties()
@@ -84,4 +85,6 @@ class Employee extends AbstractHuman implements EmployeeInterface
         }
         echo "<br>";
     }
+
+
 }
