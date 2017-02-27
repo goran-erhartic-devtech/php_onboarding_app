@@ -17,19 +17,40 @@ class Router
     }
 
     /**
+     * @return string
+     */
+    public function parseId()
+    {
+        $id = '';
+        if (isset(explode('/', $_SERVER['REQUEST_URI'])[2])) {
+            $id = explode('/', $_SERVER['REQUEST_URI'])[2];
+        }
+        return $id;
+    }
+
+    /**
      * @param $uri_path
      * @param $handler
      * @return mixed
      */
     public function get($uri_path, $handler)
     {
+        if (strpos($uri_path, '{id}') !== false) {
+            $uri_path = str_replace("{id}", $this->parseId(), $uri_path);
+        }
         return $this->all[$uri_path] = $handler;
     }
 
     public function execute()
     {
+        $id = $this->parseId();
+
         if (array_key_exists($_SERVER['REQUEST_URI'], $this->all)) {
-            return $this->all[$_SERVER['REQUEST_URI']]();
+            if (isset($id)) {
+                return $this->all[$_SERVER['REQUEST_URI']]($id);
+            } else {
+                return $this->all[$_SERVER['REQUEST_URI']]();
+            }
         } else {
             echo 'DAMN... 404';
         }
@@ -45,9 +66,17 @@ $router->get('/managers', function () {
     echo $aa->iterateProperties();
 });
 
+$router->get('/manager/{id}', function ($id) {
+    echo "This will return Manager with this id: $id";
+});
+
 $router->get('/employees', function () {
     $aa = new \GE\Person\Employee("Igor", 33, "PHP", "Onboarding", true);
     echo $aa->iterateProperties();
+});
+
+$router->get('/employee/{id}', function ($id) {
+    echo "This will return Employee with this id: $id";
 });
 
 $router->get('/', function () {
